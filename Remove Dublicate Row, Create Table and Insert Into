@@ -1,3 +1,20 @@
+Table 1 Query:
+Create Table EmployeeDemographics 
+(EmployeeID int, 
+FirstName varchar(50), 
+LastName varchar(50), 
+Age int, 
+Gender varchar(50)
+)
+
+Table 2 Query:
+Create Table EmployeeSalary 
+(EmployeeID int, 
+JobTitle varchar(50), 
+Salary int
+)
+
+Table 1 Insert:
 --Insert Into EmployeeDemographics Values
 --(1001, 'Jim', 'Halpert', 30, 'Male'),
 --(1002, 'Pam', 'Beasley', 30, 'Female'),
@@ -9,6 +26,8 @@
 --(1008, 'Stanley', 'Hudson', 38, 'Male'),
 --(1009, 'Kevin', 'Malone', 31, 'Male')
 
+* Had a dublicate row, and had to remove it using RowNumber, 
+
 --With EmployeeDemographicsCTE AS
 --( 
 --	Select *, ROW_NUMBER() Over(Partition by EmployeeID order By EmployeeID) as RowNumber
@@ -16,7 +35,7 @@
 
 --Delete from EmployeeDemographicsCTE where RowNumber >1
 
---Select * from EmployeeDemographics
+Table 2 insert:
 
 Insert into EmployeeSalary Values
 (1001, 'Salesman', 45000),
