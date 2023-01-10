@@ -1,0 +1,12 @@
+Select Gender,
+from EmployeeDemographics
+Group By gender
+
+Group By statement groups rows that have the same values into summary rows,
+
+Select *
+from EmployeeDemographics
+order by 4 desc, 5 desc
+
+The ORDER BY keyword is used to sort the result-set in ascending or descending order.
+ASC order is by default
