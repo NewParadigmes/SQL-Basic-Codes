@@ -1,0 +1,27 @@
+Select *
+From EmployeeDemographics
+Where age <=32 and Gender = 'Male'
+
+Select *
+From EmployeeDemographics
+Where age <=32 OR Gender = 'Male'
+
+Only one of these criterias must be correct.
+
+Select * 
+From EmployeeDemographics
+Where AGE <> 30
+
+"<>" - doesn't equal.
+
+Select *
+From EmployeeDemographics
+where LastName like 'S%ott%'
+
+The "LIKE" operator is used in a "WHERE" clause to search for a specified pattern in a column.
+
+Select *
+From EmployeeDemographics
+where FirstName in ('jim', 'michael') 
+
+everything will be return. In operator is almost like "=".
