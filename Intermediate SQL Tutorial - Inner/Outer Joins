@@ -1,0 +1,32 @@
+Select *
+from EmployeeDemographics
+join EmployeeSalary 
+on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+Select *
+from EmployeeDemographics
+Full outer join EmployeeSalary 
+on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+Select *
+from EmployeeDemographics
+right outer join EmployeeSalary 
+on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+Select *
+from EmployeeDemographics
+left outer join EmployeeSalary 
+on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+(INNER) JOIN: Returns records that have matching values in both tables
+LEFT (OUTER) JOIN: Returns all records from the left table, and the matched records from the right table (in this example is EmployeeDemographics)
+RIGHT (OUTER) JOIN: Returns all records from the right table, and the matched records from the left table (in this example is EmployeeSalary)
+FULL (OUTER) JOIN: Returns all records when there is a match in either left or right table
+
+Small manipulation with database
+Select EmployeeDemographics.EmployeeID, FirstName, LastName, Salary
+from EmployeeDemographics
+inner join EmployeeSalary 
+on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+where FirstName <> 'michael'
+order by Salary desc
