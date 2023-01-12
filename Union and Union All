@@ -1,0 +1,9 @@
+Select * 
+from EmployeeDemographics
+Union
+Select *
+from WarehouseEmployeeDemographocs
+
+The UNION operator is used to combine the result-set of two or more SELECT statements. 
+
+The UNION operator selects only distinct values by default. To allow duplicate values, use UNION ALL:
