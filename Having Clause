@@ -1,0 +1,10 @@
+The HAVING clause was added to SQL because the WHERE keyword cannot be used with aggregate functions.
+supposed to be written after GroupBy
+
+Select Jobtitle, avg (Salary)
+from EmployeeDemographics
+join EmployeeSalary
+on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID 
+group by Jobtitle
+having avg(salary) > 45000
+order by AVG(Salary) 
