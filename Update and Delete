@@ -1,0 +1,13 @@
+
+Update 
+The UPDATE statement is used to modify the existing records in a table.
+
+update EmployeeDemographics
+set age = 31, Gender = 'female'
+where FirstName = 'holy' and LastName = 'flax'
+
+
+The DELETE statement is used to delete existing records in a table.
+
+Delete from EmployeeDemographics
+where EmployeeID = 1005 
