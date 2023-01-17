@@ -1,4 +1,4 @@
-Select Gender,
+Select Gender
 from EmployeeDemographics
 Group By gender
 
