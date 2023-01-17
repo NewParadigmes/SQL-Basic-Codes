@@ -1,0 +1,5 @@
+select FirstName, LastName, Gender,Salary,
+count(gender) over (partition by gender) as totalgender
+from [SQl Tutorial]..EmployeeDemographics Dem
+join [SQl Tutorial]..EmployeeSalary Sal
+on dem.EmployeeID = Sal.EmployeeID
