@@ -1,0 +1,38 @@
+
+-- Subsqueries ( in Select, From, and Where statement)
+
+Select *
+from EmployeeSalary
+
+-- Subquery in Select
+
+Select EmployeeID, Salary, (select AVG(salary) from EmployeeSalary) as AllAvgSalary
+from EmployeeSalary
+
+
+-- With Partition by 
+
+Select EmployeeID, Salary, AVG(salary) over () as AllAvgSalary
+from EmployeeSalary
+
+-- Why Group By doesn't work
+
+Select EmployeeID, Salary, AVG(salary) over () as AllAvgSalary
+from EmployeeSalary
+group by EmployeeID, Salary
+order by 1,2
+
+-- Subquery in From
+
+Select a.EmployeeID, AllAvgSalary
+from (Select EmployeeID, Salary, AVG(salary) over () as AllAvgSalary
+from EmployeeSalary) a
+
+--Subquery in where
+
+Select EmployeeID, JobTitle, Salary
+from EmployeeSalary
+where EmployeeID in (
+	select EmployeeID
+	from EmployeeDemographics
+	where age > 30)
