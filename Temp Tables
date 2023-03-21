@@ -1,0 +1,37 @@
+Temporary tables are tables that exist temporarily on the SQL Server.
+
+The temporary tables are useful for storing the immediate result sets that are accessed multiple times.
+
+Create table #temp_Employee(
+EmployeeId int,
+Jobtitile varchar(100),
+Salary int)
+
+Insert into #temp_Employee values ('1001', 'HR', '45000')
+
+Select *
+from #temp_Employee
+
+Insert into #temp_Employee
+Select *
+From EmployeeSalary
+
+
+Create Table #temp_Employee2 (
+JobTitle varchar(50),
+EmployeesPerJob int,
+AvgAge int,
+AvgSalary int)
+
+We can create a temp table using already exsisting temp. 
+
+Insert into #temp_Employee2
+Select JobTitle, COUNT(Jobtitle), Avg(Age), AVG(salary)
+From EmployeeDemographics emp
+join EmployeeSalary sal
+on emp.EmployeeID = sal.EmployeeID
+group by JobTitle
+
+
+Select *
+from #temp_Employee2
