@@ -3,3 +3,13 @@ wildcards used with the #Like operator
 
 All of these (i.e. Like, %, and _) is used in where clause  
 
+% -> represents zero, one or more characters
+example: 
+Where
+  job_title_short like '%Analyst%' -> filter anything that has Analyst in the job title. 
+   job_title_short like '%Business%Analyst%' -> filter anything that has Analyst and Business in the job title. 
+
+_ -> represents one, single characters
+
+where 
+     job_title_short like '%Business_Analyst%' -> filter anything Business Analyst in the job title. 
