@@ -1,0 +1,5 @@
+/* wildcards use to substitute one or more characters in a string
+wildcards used with the #Like operator
+
+All of these (i.e. Like, %, and _) is used in where clause  
+
