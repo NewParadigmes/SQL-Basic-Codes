@@ -13,3 +13,5 @@ _ -> represents one, single characters
 
 where 
      job_title_short like '%Business_Analyst%' -> filter anything Business Analyst in the job title. 
+*/
+
