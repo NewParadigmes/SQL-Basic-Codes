@@ -6,6 +6,22 @@ min()
 max()
 count()
 
+SELECT 
+  project_id,
+  activity_date, 
+  hours_spent, 
+  hours_rate as original_rate,
+  hours_rate + 5 as rate_hike,
+  sum (hours_spent * hours_rate) as total_cost,
+  sum (hours_spent * (hours_rate + 5)) as increased_h_rate
+
+-- in order to *, use sum function. 
+
+FROM invoices_fact
+GROUP by project_id 
+
+
+
 Used in conjunction with / group by and having 
 
-Having -> Filter groups based on the result of an aggregated function (unlike #where, which filters rows)  
+Having -> Filter groups based on the result of an aggregated function (unlike #where which filters rows)  
