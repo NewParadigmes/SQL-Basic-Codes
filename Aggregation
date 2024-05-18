@@ -1,0 +1,11 @@
+Aggregation -> count a single resutls from input values
+
+sum()
+avg()
+min()
+max()
+count()
+
+Used in conjunction with / group by and having 
+
+Having -> Filter groups based on the result of an aggregated function (unlike #where, which filters rows)  
