@@ -1,0 +1,27 @@
+INT 
+Exact-number data types that use integer data.
+E.g. (0,1,2,3,4 ) 
+
+VARCHAR [ ( n | max ) ]   || CHAR [ ( n ) ]
+
+Character strings. Character data types that are either fixed-size, CHAR, or variable-size, VARCHAR.
+If you use CHAR or VARCHAR :
+Use CHAR when the sizes of the column data entries are consistent.
+Use VARCHAR when the sizes of the column data entries vary considerably.
+
+BOOLEAN
+FALSE / 0 Value, or TRUE / 1 Value
+
+TIMESTAMP
+[ (p) ] with time zone	-	date and time, including time zone
+
+NUMERIC
+Decimal[ (p[ ,s] )] and numeric[ (p[ ,s] )]
+
+TEXT
+
+DATE
+
+TIMESTAMP WITHOUT TIME ZONE
+timestamp [ (p) ] [ without time zone ]	
+
