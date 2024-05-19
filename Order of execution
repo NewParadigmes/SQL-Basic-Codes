@@ -1,0 +1,16 @@
+From / Join 
+specify the table to retrive the data from and how to join them
+where 
+Filter rows based on condition
+group by
+group rows share a property so aggregate functions can be applied 
+having 
+filters  groups based on aggregate fucntions ( used after group by) 
+select 
+select specific columns to display a final result
+distinct
+removes duplicate rows from the result set
+order by 
+sorts the result set based on specified columns/values
+limit
+limit the number of rows returned
